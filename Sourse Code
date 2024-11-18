@@ -1,0 +1,28 @@
+# Подключение модулей PyGame и NumPy
+# Если модули не установленны, пропишите в консоль pip install pygame и pip install numpy
+
+import pygame
+import numpy as np
+
+# Инициализация модуля PyGame
+pygame.init()
+
+# Окно игры: установка размеров, названия и иконки
+pygame.display.set_mode((600, 400), pygame.RESIZABLE)
+pygame.display.set_caption('Mars colony')
+pygame.display.set_icon(pygame.image.load('марс.jpg'))
+
+# Создание объекта для отслеживания времени и установка целевой частоты кадров (FPS)
+clock = pygame.time.Clock()
+FPS = 60
+
+
+# Основной игровой цикл
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            exit()
+
+    clock.tick(FPS)
+
+
